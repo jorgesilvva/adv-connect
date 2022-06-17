@@ -25,7 +25,6 @@
               <a class="nav-item nav-link" href="{{ url_for('agenda') }}">Agenda<span class="sr-only">(current)</a>
               <a class="nav-item nav-link" href="{{ url_for('gerenciar') }}">Gerenciar<span class="sr-only">(current)</a>
               <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout<span class="sr-only">(current)</span></a>
-              <div class="nav-item" style="color: #08558B"> Bem vindo(a), {{ current_user.name }}!<span class="sr-only">(current)</span></div>
             {% else %}
               <a class="nav-item nav-link" href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
             {% endif %}
