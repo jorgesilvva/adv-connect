@@ -1,0 +1,66 @@
+{% extends 'viewbase.html' %}
+
+{%block title%} Aviso {% endblock %}
+
+{%block content%}
+  <h1 class="aviso">&#8986 DATA OU HORÁRIO INDISPONÍVEL</h1>
+
+   
+
+    <form action= "" method="POST">
+        
+      <div class="form1">Informe o nome completo ... <input type="text" name="cliente" value="{{cadastrado.cliente}}" required></div>  
+
+      <div class="form1">Informe seu melhor e-mail .. <input type="email" name="email" value="{{cadastrado.email}}" required></div>
+
+      <div class="form1">Informe o (DDD+telefone) ... <input type="tel" name="contato" value="{{cadastrado.contato}}" required></div>
+      
+      <div class="form1">Informe a data ..................&#10067 <input type="date" name="data" value="{{cadastrado.data}}" id="txtDat" onchange="validarData(this)" required></div>
+
+      <div class="form1">Informe um horário ...........&#10067 <select type= "time" name="horario" required>
+          <option value="{{cadastrado.horario}}">{{cadastrado.horario}}Troque data ou horário</option>
+          <option value="08:00">08:00</option>
+          <option value="08:40">08:40</option>
+          <option value="09:20">09:20</option>
+          <option value="10:00">10:00</option>
+          <option value="10:40">10:40</option>
+          <option value="11:20">11:20</option>
+          <option value="13:00">13:00</option>
+          <option value="13:40">13:40</option>
+          <option value="14:20">14:20</option>
+          <option value="15:00">15:00</option>
+          <option value="15:40">15:40</option>
+          <option value="16:20">16:20</option>
+          <option value="17:00">17:00</option>
+          <option value="17:40">17:40</option>
+          <option value="18:20">18:20</option></select>
+      </div>
+
+      <label class="form1">Forma de atendimento ......... <select type= "text" name="tipo" required>
+          <option type= "text" value="{{cadastrado.tipo}}">{{cadastrado.tipo}}</option>
+          <option type= "text" value="Presencial">Presencial</option>
+          <option type= "text" value="Remoto">Remoto</option></select>
+      </label>
+
+      <label class="form1">Informe um serviço ............... <select type= "text" name="servico"  required>
+          <option type= "text" value="{{cadastrado.servico}}">{{cadastrado.servico}}</option>
+          <option type= "text" value="Pensão Alimentícia">Pensão Alimentícia</option>
+          <option type= "text" value="Direito Familiar">Direito Familiar</option>
+          <option type= "text" value="Direio Imobiliário">Direito Imobiliário</option>
+          <option type= "text" value="Aposentadoria">Aposentadoria</option>
+          <option type= "text" value="Inventário">Inventário</option></select>
+      </label>
+
+      <div><p>
+        <article class="text">#ParaTodosVerem: Botão consultar, click para ver datas livres.</article>
+        <article class="text">#ParaTodosVerem: Botão salvar, click após correção.</article>
+      </div></p>
+
+      <h4>
+        <a href="{{ url_for('consulta') }}"><button class="button2" type="button">CONSULTAR</button></a>
+        <script src="../static/alert.js"></script>
+        <button class="button2" type="submit" id="txtDat">SALVAR</button>
+      </h4>
+      
+    </form>
+{% endblock %}
