@@ -1,26 +1,6 @@
 @charset "utf-8";
 
 *  
-  /* Imagem index */
-
-  {box-sizing: border-box;}
-  .mySlide, img {vertical-align: middle;}
-
-  .slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-  }
-
-  /* #PraTodosVerem */
-
-  .text {
-    color: yellow;
-    opacity: 1;
-    font-size: .8rem;
-    padding: 0px 8px;     
-  }
-
   /* Geral */
 
   body {
@@ -52,6 +32,15 @@
     text-align: center;
     color: yellow;
     width: 100% !important;
+  }
+
+  /* #PraTodosVerem */
+
+  .text {
+    color: yellow;
+    opacity: 1;
+    font-size: .8rem;
+    padding: 0px 8px;     
   }
 
   /* Formulários */
@@ -265,6 +254,10 @@
   transition: .5s;
   }
 
+  @media only screen and (max-width: 600px) {
+    table {font-size: 30.5%}
+  }
+
   /* Rodapé */
 
   footer{
@@ -274,5 +267,4 @@
     color: blanchedalmond;
     text-align: center;
     width: auto;
-  } 
-    
+  }
