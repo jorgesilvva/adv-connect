@@ -72,7 +72,7 @@ def final():
             try:
                db.session.add(temp)
                db.session.commit()
-               #enviar_email()
+               enviar_email()
                return render_template('final.html')
             except:
                db.session.rollback()                     
@@ -121,7 +121,7 @@ def editar_cadastro(id):
             cadastrado.datahora = datahora
             try:
                 db.session.commit()
-                #enviar_email()
+                enviar_email()
                 return redirect(url_for('cadastro'))
             except:
                 db.session.rollback()
@@ -185,7 +185,7 @@ def editar_agenda(id):
            cadastrado.datahora = datahora
            try:
                 db.session.commit()
-                #enviar_email()
+                enviar_email()
                 return redirect(url_for('agenda'))
            except:
                 db.session.rollback()
