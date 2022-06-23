@@ -43,6 +43,37 @@
     padding: 0px 8px;     
   }
 
+  /* #LGPD */
+
+.lgpd {
+  position: fixed;
+  background-color: #0D58BD;
+  width: 100% !important;
+  height: 12% !important;
+  padding-top: 10px;
+  padding-left: 17%;
+  font-size: .9rem;
+  display: flex;
+}
+
+.lgpd a {
+  color: yellow;
+}
+
+.lgpd button {
+  background-color: #04a600;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  padding: 8px 32px;
+}
+
+.lgpd button:hover {
+  background-color:#FF7F00;
+  transition: .5s;
+}
+
   /* Formulários */
 
   div {
@@ -147,8 +178,20 @@
     width: 70% !important;
     height: 70% !important;
     margin: auto;
-  }     
+  }
 
+  table.consulta {
+    background-color: white;
+    display:center;
+    border: solid 2px burlywood;
+    font-family: sans-serif;
+    color: black;
+    font-size: 70%;
+    width: 55% !important;
+    height: 55% !important;
+    margin: auto;
+  }
+  
   tr, td {
     padding: 0.3em;
     margin: 0;
@@ -255,7 +298,18 @@
   }
 
   @media only screen and (max-width: 600px) {
-    table {font-size: 30.5%}
+
+    .lgpd {
+      position: static;
+    }
+
+    table {
+      font-size: 30.5%
+    }
+
+    table.consulta {
+      font-size: 65%; width: 90% !important; height: 90% !important;
+    }
   }
 
   /* Rodapé */
@@ -267,4 +321,6 @@
     color: blanchedalmond;
     text-align: center;
     width: auto;
-  }
+  } 
+    
+ 
