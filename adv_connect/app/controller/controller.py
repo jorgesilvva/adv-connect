@@ -38,6 +38,11 @@ def enviar_email():
 def index():
     return render_template('index.html')
 
+#Rota página Política de privacidade
+@app.route('/privacidade')
+def privacidade():
+    return render_template('privacidade.html')
+
 #Rota página conectar: escolha do serviço conforme área de atuação
 @app.route('/conectar')
 def conectar():
