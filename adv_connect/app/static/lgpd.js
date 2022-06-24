@@ -2,8 +2,8 @@ let lgpdurl = 'https://jsonplaceholder.typicode.com/posts'; // URL do servidor/b
 let lgpdHtml = `
     <div class="lgpd">
       <div style="text-align:left">
-        Utilizamos cookies para melhorar a experiência do usuário. Clique em Aceitar para concordar ou    
-        obtenha mais informações visitando a nossa <a href="privacidade" target="_blank">Política de privacidade.</a><!--colocar link da politica de qualidade -->
+        Ultilizamos cookies para melhorar a experiência do usuário. Clique em Aceitar para concordar ou    
+        saiba mais visitando a nossa <a href="privacidade" target="_blank">Política de privacidade.</a><!--colocar link da politica de qualidade -->
       </div>
       <div style="margin-top: 3px;">
         <button>ACEITAR</button>
