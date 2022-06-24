@@ -4,16 +4,16 @@
 
 {%block content%}
 
-<script type="text/javascript">
-    // Desabilitar o botao voltar
-    window.history.forward();
-    function noBack() {
-        window.history.forward();
-    }
-</script>
+  <script type="text/javascript">
+      // Desabilitar o botao voltar
+      window.history.forward();
+      function noBack() {
+          window.history.forward();
+      }
+  </script>
 
-<h1>CADASTRO E AGENDAMENTO:</h1>
-<br>      
+  <h1>CADASTRO E AGENDAMENTO:</h1>
+  <br>      
   <form action="{{ url_for('final') }}" method="POST">
 
       <div class="form1">Informe o nome completo ... <input type= "text" name= "cliente" placeholder= "Nome completo" required></div>
@@ -60,6 +60,6 @@
 
   </form>
 
-<script src="../static/alert.js"></script>
+  <script src="../static/alert.js"></script>
 
 {% endblock %}
