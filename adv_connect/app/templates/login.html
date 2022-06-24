@@ -14,11 +14,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="../static/layout/favicon.png">
   <title>Login</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+  <link rel="stylesheet" href="../static/estilo.css">
 </head>
 <body>
   <div id="login-container">
-    <h1 class="login">Login</h1>
+    <h1 class="login">Login (Adm)</h1>
     <form class="login"  action= "{{ url_for('login') }}" method="POST">
       <label class="login" for="email">E-mail</label>
       <input class="login" type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="on">
