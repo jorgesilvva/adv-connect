@@ -49,8 +49,8 @@
   position: fixed;
   background-color: #0D58BD;
   width: 100% !important;
-  height: 15% !important;
-  padding-top: 10px;
+  height: 11.5% !important;
+  padding: 1.6vh;
   padding-left: 17%;
   font-size: .9rem;
   display: flex;
@@ -300,12 +300,13 @@
   @media only screen and (max-width: 600px) {
 
     .lgpd {
-      position: static;
-      padding: 3.5vh;
+      position: absolute;
+      height: 23% !important;
+      padding: 3vh;
     }
 
     .lgpd button {
-      padding: 7px 14px;
+     padding: 7px 14px;
     }
 
     table {
