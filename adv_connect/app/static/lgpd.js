@@ -9,7 +9,7 @@ let lgpdHtml = `
         <button>ACEITAR</button>
       </div>
     </div>    
-    <link rel="stylesheet" href="{{ url_for('static', filename='estilo.css') }}">
+    <link rel="stylesheet" href="../static/estilo.css">
 `
 let lscontent = localStorage.getItem('lgpd')
 if(!lscontent) {
