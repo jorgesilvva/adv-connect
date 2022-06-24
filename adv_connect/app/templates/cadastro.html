@@ -1,62 +1,59 @@
 {% if current_user.is_authenticated %}
 
-{% extends 'viewbase.html' %}
+	{% extends 'viewbase.html' %}
 
-{%block title%} Cadastro {% endblock %}
+	{%block title%} Cadastro {% endblock %}
 
-{%block content%}
-        <h1>CADASTRO</h1>
-        <br>
-        <h2>
-            <a href="{{ url_for('painel') }}"><button class="button2" type="button">PAINEL</button></a>
-            <a href="{{ url_for('agenda') }}"><button class="button2" type="button">AGENDA</button></a>
-            <a href="{{ url_for('conectar') }}"><button class="button2" type="button">CONECTAR</button></a>
-        </h2>
-            <table>
-                <tr>
-                    <td>ID</td>
-                    <td>Cliente</td>
-                    <td>E-mail</td>
-                    <td>Contato</td>
-                    <td>Data</td>
-                    <td>Horario</td>
-                    <td>Tipo</td>
-                    <td>Serviço</td>
-                    <td>Excluir</td>
-                    <td>Editar</td>
-                </tr>
-                {% for cadastrado in cadastrados %}
-                <tr>
-                    <td>{{ cadastrado._id }}</td>
-                    <td>{{ cadastrado.cliente }}</td>
-                    <td>{{ cadastrado.email }}</td>
-                    <td>{{ cadastrado.contato }}</td>
-                    <td>
-                        <script>
-                            var data = "{{cadastrado.data}}";
-                            for(i=0; i< data.length; i++);{
-                                let data_americana = data ;
-                                let data_brasileira = data_americana.split('-').reverse().join('/');
-                                console.log(data_brasileira);
-                                data_correta = data_brasileira
-                            }
-                                document.write(data_correta);
-                         </script>
-                    </td>
-                    <td>{{ cadastrado.horario }}</td>
-                    <td>{{ cadastrado.tipo }}</td>
-                    <td>{{ cadastrado.servico }}</td>
-                    <td><a href='/excluir_cadastro/{{ cadastrado._id }}'>&#10060</a></td>
-                    <td><a href='/editar_cadastro/{{ cadastrado._id }}'>&#9997</a></td>
-                </tr>
-                {% endfor %}
-            </table>
-{% endblock %}
-
+	{%block content%}
+	<h1>CADASTRO</h1>
+	<br>
+		<h2>
+				<a href="{{ url_for('painel') }}"><button class="button2" type="button">PAINEL</button></a>
+				<a href="{{ url_for('agenda') }}"><button class="button2" type="button">AGENDA</button></a>
+				<a href="{{ url_for('conectar') }}"><button class="button2" type="button">CONECTAR</button></a>
+		</h2>
+			<div><table style="position: center;">
+				<tr>
+					<td>ID</td>
+					<td>Cliente</td>
+					<td>E-mail</td>
+					<td>Contato</td>
+					<td>Data</td>
+					<td>Horario</td>
+					<td>Tipo</td>
+					<td>Serviço</td>
+					<td>Excluir</td>
+					<td>Editar</td>
+				</tr>
+				{% for cadastrado in cadastrados %}
+					<tr>
+						<td>{{ cadastrado._id }}</td>
+						<td>{{ cadastrado.cliente }}</td>
+						<td>{{ cadastrado.email }}</td>
+						<td>{{ cadastrado.contato }}</td>
+						<td>
+							<script>
+									var data = "{{cadastrado.data}}";
+									for(i=0; i< data.length; i++);{
+											let data_americana = data ;
+											let data_brasileira = data_americana.split('-').reverse().join('/');
+											console.log(data_brasileira);
+											data_correta = data_brasileira
+									}
+											document.write(data_correta);
+								</script>
+						</td>
+						<td>{{ cadastrado.horario }}</td>
+						<td>{{ cadastrado.tipo }}</td>
+						<td>{{ cadastrado.servico }}</td>
+						<td><a href='/excluir_cadastro/{{ cadastrado._id }}'>&#10060</a></td>
+						<td><a href='/editar_cadastro/{{ cadastrado._id }}'>&#9997</a></td>
+					</tr>
+				{% endfor %}
+			</table></div>
+	{% endblock %}
 {% else %}
-
-<script>
-    window.location.href = "{{ url_for('login') }}"
-</script>
-
+	<script>
+			window.location.href = "{{ url_for('login') }}"
+	</script>
 {% endif %}
