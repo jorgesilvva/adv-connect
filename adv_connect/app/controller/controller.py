@@ -29,7 +29,7 @@ def enviar_email():
      msg.attach(MIMEText(texto, 'plain'))
      #Login e envio
      server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-     server.login("adv.connect.contato@gmail.com", "tdtclvbosqlzkxmn")
+     server.login("adv.connect.contato@gmail.com", "*********")
      server.sendmail(msg['From'], msg['To'], msg.as_string())
      server.quit()
 
