@@ -1,0 +1,67 @@
+{% extends 'viewbase.html' %}
+
+{%block title%} Final {% endblock %}
+
+{%block content%}
+
+  <script type="text/javascript">    
+    document.onkeydown = function () { 
+      switch (event.keyCode) {
+        case 116 :  
+          alert("Click em Finalizar");
+          event.returnValue = false;
+          event.keyCode = 0;           
+          return false;             
+        case 82 : 
+          if (event.ctrlKey) {  
+            alert("Click em Finalizar");
+            event.returnValue = false;
+            event.keyCode = 0;             
+            return false;
+      }
+    }
+  } 
+  </script>
+
+  <script type="text/javascript">
+      // Desabilitar voltar
+      window.history.forward();
+      function noBack() {
+          window.history.forward();
+      }
+  </script>
+
+  <!--<script>
+      // Desabilitar refresch
+      if ( window.history.replaceState ) {
+        window.history.replaceState( '', '', window.location.href );
+      }
+  </script>-->
+
+  <!--<script>
+      // Desabilitar refresch
+      window.onload = function() {
+          history.replaceState("", "", "final");
+      }
+  </script>-->
+
+  <h1>AGENDAMENTO REALIZADO!</h1>
+  <br>
+    <div>
+      <div class="mySlide">
+        <img src="../static/layout/img2.png" style="width:100%">
+      </div>
+    </div>
+
+    <div style="text-align:center">
+      <p>
+        <article class="text">#ParaTodosVerem: Imagem de fundo cinza, com o texto "Confirmação enviada por e-mail". Ao lado uma mão portando um celular, de onde nascem hologramas de cartas aladas, seladas com o @, apontando o envio da mensagem.</article>
+        <article class="text">#ParaTodosVerem: Botão finalizar, click para sair.</article>
+      </p>
+    </div>
+
+  <h5>
+    <a href="{{ url_for('index') }}"><button class="button1" type="button">FINALIZAR</button></a>
+  </h5>
+          
+{% endblock %}

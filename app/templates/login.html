@@ -1,0 +1,39 @@
+{% if current_user.is_authenticated %}
+
+<script>
+    window.location.href = "{{ url_for('painel') }}"
+</script>
+
+{% else %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="../static/layout/favicon.png">
+  <title>Login</title>
+  <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+  <div id="login-container">
+    <h1 class="login">Login (Adm)</h1>
+    <form class="login"  action= "{{ url_for('login') }}" method="POST">
+      <label class="login" for="email">E-mail</label>
+      <input class="login" type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="on">
+      <label class="login" for="password">Senha</label>
+      <input class="login" type="password" name="password" id="password" placeholder="Digite sua senha">
+      <a href="{{ url_for('index') }}" class="login" id="forgot-pass">Ir para o início</a>
+      <input class="login" type="submit" value="login">
+    </form>
+  </div>
+</body>
+<br>
+<br>
+<footer>
+  <p>Projeto Integrador II - <a href="{{ url_for('index') }}">adv-connect.herokuapp.com</a></p>
+</footer>
+</html>
+
+{% endif %}
